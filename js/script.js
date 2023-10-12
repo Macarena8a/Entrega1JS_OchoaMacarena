@@ -1,5 +1,5 @@
 //--------------------------------PLATAFORMA DE AUTOGESTIÓN DE SERVICIOS MÓVILES----------
-let mailSaved= "admin";
+let mailSaved= "prueba1234@gmail.com";
 let passwordSaved= "1234";
 //declaración de la función de logueo.
 function InicioSesion() {

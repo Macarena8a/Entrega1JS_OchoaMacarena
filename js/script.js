@@ -1,5 +1,5 @@
 //--------------------------------PLATAFORMA DE AUTOGESTIÓN DE SERVICIOS MÓVILES----------
-let mailSaved= "prueba1234@gmail.com";
+let mailSaved= "adm";
 let passwordSaved= "1234";
 //declaración de la función de logueo.
 function InicioSesion() {
@@ -65,8 +65,9 @@ const packsDisponibles = () => {
                 alert('Elegiste una opción inválida');
                 packsDisponibles()  
                 break;
+            
         }
-        eleccionPack = prompt("Elegí qué querés consultar: \n1- Ver tu consumo de datos. \n2 - Descargar tu factura. \n3 - Consultar monto a pagar. \n4-  Comprar packs  \n5- Salir.");
+        ;
    
 }
 
@@ -74,9 +75,9 @@ const packsDisponibles = () => {
 if (InicioSesion()) {
     let datos = 2;
     let monto = 2450;
-    let menu = prompt("Elegí qué querés consultar: \n1- Ver tu consumo de datos. \n2 - Descargar tu factura. \n3 - Consultar monto a pagar. \n4-  Comprar packs  \n5- Salir.");
+    let menu = prompt("Elegí qué querés consultar: \n1- Ver tu consumo de datos. \n2 - Descargar tu factura. \n3 - Consultar monto a pagar. \n4-  Comprar packs  \n5- Ver carrito.\n6- Salir.");
 
-    while (menu != '5') {
+    while (menu != '6') {
         switch (menu) {
             case '1':
                 alert("Te quedan disponibles " + datos +"GB de tu plan de 15 GB")
@@ -89,12 +90,15 @@ if (InicioSesion()) {
                 break;     
             case '4':
                 packsDisponibles()  
-            break;         
+            break; 
+            case '5':
+                alert(carrito)
+            break;          
             default:
                 alert('Elegiste una opción inválida');
                 break;
         }
-        menu = prompt("Elegí qué querés consultar: \n1- Ver tu consumo de datos. \n2 - Descargar tu factura. \n3 - Consultar monto a pagar. \n4-  Comprar packs  \n5- Salir.");
+        menu = parseInt(prompt("Elegí qué querés consultar: \n1- Ver tu consumo de datos. \n2 - Descargar tu factura. \n3 - Consultar monto a pagar. \n4-  Comprar packs  \n5- Ver carrito.\n6- Salir."));
     }
 } else {
     alert('No es posible acceder a tu cuenta. Te pedimos restablecer tu contraseña.');
@@ -103,3 +107,4 @@ if (InicioSesion()) {
 alert('Adiós. Muchas gracias por operar con nuestros servicios');
 
 
+//
